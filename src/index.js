@@ -9,7 +9,7 @@ var createReactClass = require('create-react-class')
 var ToDoComponent = createReactClass({
 	getInitialState:function(){
 		return{
-			todos:['wash up','eat some cheese','take a nap']
+			todos:['wash up','eat some cheese','take a nap','Megha']
 		}
 	},
 	render:function(){
@@ -25,9 +25,6 @@ var ToDoComponent = createReactClass({
 		return(
 			<div id="todo-list">
 				<h1>Megha</h1>
-				
-				
-
 				<ul>{todos}</ul>
 			</div>
 
@@ -42,11 +39,10 @@ var ToDoItem = createReactClass({
 		return(
 			<li>
 				<div className = "todo-item">
-					<span className="item-name">this.props.item</span>
+					<span className="item-name">{this.props.item}</span>
 				</div>
 			</li>
 		);
 	}
 });
-var myCheese = {name:'Sandwich',smellFatcor:'Extreme pong',price:'3.50'};
-ReactDOM.render(<ToDoComponent mssg="I love Megha" cheese={myCheese}/>,document.getElementById('todo-wrapper'));
+ReactDOM.render(<ToDoComponent />,document.getElementById('todo-wrapper'));
